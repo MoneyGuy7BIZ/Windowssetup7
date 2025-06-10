@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Windows Setup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="setup-container">
+    <!-- Welcome Screen -->
+    <div class="screen active" id="screen-welcome">
+      <h1>Hi there</h1>
+      <p>Let's get a few basic things out of the way.</p>
+      <button onclick="nextScreen()">Next</button>
+    </div>
+
+    <!-- Name Your PC -->
+    <div class="screen" id="screen-name">
+      <h2>Name your PC</h2>
+      <input type="text" placeholder="My-PC" />
+      <button onclick="nextScreen()">Next</button>
+    </div>
+
+    <!-- Network -->
+    <div class="screen" id="screen-network">
+      <h2>Connect to a network</h2>
+      <ul>
+        <li onclick="fakeConnect()">Home WiFi</li>
+        <li onclick="fakeConnect()">OfficeNet</li>
+        <li onclick="fakeConnect()">Guest123</li>
+      </ul>
+    </div>
+
+    <!-- Microsoft Account -->
+    <div class="screen" id="screen-account">
+      <h2>Sign in with Microsoft</h2>
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button onclick="nextScreen()">Sign In</button>
+    </div>
+
+    <!-- Privacy -->
+    <div class="screen" id="screen-privacy">
+      <h2>Choose privacy settings</h2>
+      <label><input type="checkbox" checked /> Location access</label>
+      <label><input type="checkbox" checked /> Send diagnostic data</label>
+      <label><input type="checkbox" checked /> Tailored experiences</label>
+      <label><input type="checkbox" checked /> Advertising ID</label>
+      <button onclick="nextScreen()">Accept</button>
+    </div>
+
+    <!-- Final Screen -->
+    <div class="screen" id="screen-done">
+      <h1>You're all set!</h1>
+      <p>This PC is ready to use.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
